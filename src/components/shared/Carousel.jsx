@@ -21,7 +21,7 @@ function Carousel({
 	}, []);
 
 	return (
-		<div className="overflow-hidden relative h-[300px] lg:h-[568px] rounded-md">
+		<div className="overflow-hidden relative h-[300px] md:h-[500px] lg:h-[568px] rounded-md">
 			<div
 				className="flex transition-transform ease-out duration-500"
 				style={{ transform: `translateX(-${curr * 100}%)` }}
