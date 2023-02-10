@@ -20,7 +20,7 @@ function HotelDetails({ hotel }) {
 
 	return (
 		<section className="mt-7">
-			<div className="w-full px-5 lg:w-[1300px] mx-auto">
+			<div className="w-full px-5 lg:w-[1300px] mx-auto flex flex-col items-center lg:items-start">
 				<div className="flex items-center justify-between">
 					<h1 className="text-2xl font-bold py-2 lg:text-3xl">{hotel.title}</h1>
 					<div className="flex ml-4">
@@ -31,10 +31,12 @@ function HotelDetails({ hotel }) {
 						<AiFillStar className="text-2xl text-yellow-300 lg:text-3xl cursor-pointer" />
 					</div>
 				</div>
-				<p className="flex items-center">
-					<FaLocationArrow />
-					<span className="ml-3 font-semibold">{hotel.location}</span>
-				</p>
+				<div className="self-start">
+					<p className="flex items-center">
+						<FaLocationArrow />
+						<span className="ml-3 font-semibold">{hotel.location}</span>
+					</p>
+				</div>
 				<div className="my-4">
 					<p className="font-semibold text-2xl">Rs {hotel.price}</p>
 					<p className="text-xl mt-4 text-justify">{hotel.description}</p>
@@ -56,7 +58,7 @@ function HotelDetails({ hotel }) {
 						</div>
 					</div>
 				</div>
-				<div className="w-[400px] my-8 flex flex-col items-center ml-5 md:ml-0 md:items-start lg:ml-0 lg:items-start">
+				<div className="w-[400px] my-4 flex flex-col items-center lg:items-start">
 					<button
 						className="w-[80%] bg-black text-white py-2 px-3 font-semibold rounded-md hover:bg-black/70"
 						onClick={handleBook}
