@@ -17,11 +17,7 @@ function Hotel({ hotels }) {
 			<section className="max-w-[1400px] mx-auto mt-[80px] px-3 py-3 grid md:grid-cols-1fr lg:grid-cols-2fr-1fr gap-2">
 				<Carousel>
 					{slides.map((slide, index) => (
-						<img
-							key={index}
-							src={slide}
-							className="w-full h-full object-cover"
-						/>
+						<img key={index} src={slide} className="w-full h-full" />
 					))}
 				</Carousel>
 				<div className="">
